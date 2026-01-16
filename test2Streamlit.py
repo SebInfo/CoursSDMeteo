@@ -10,7 +10,7 @@ st.write(
 
 st.divider()
 
-st.header("Sélection des paramètres")
+st.header("Sélection des paramètres !")
 
 st.markdown("""
 ### Contexte de l'application
