@@ -27,60 +27,78 @@ def load_data(path: str) -> pd.DataFrame:
 csv_path = st.text_input("Chemin du fichier CSV", "meteoMontpellier.csv")
 df = load_data(csv_path)
 
-# Option fuseau horaire (souvent inutile si on compte “par année” en UTC, mais utile si besoin local)
-use_paris = st.checkbox("Convertir la date en Europe/Paris", value=False)
-if use_paris:
-    # validity_time est généralement timezone-aware (UTC)
-    df["validity_time"] = df["validity_time"].dt.tz_convert("Europe/Paris")
+# -------------------------
+# Dictionnaire événements
+# -------------------------
+WW_EVENTS = {
+    "Temps clair / sec": [0, 1, 2, 3],
+    "Brume": [5],
+    "Brouillard": [10],
+    "Pluie / bruine": list(range(20, 60)),
+    "Neige / grésil": list(range(60, 80)),
+    "Averses": [80, 81, 82],
+    "Orage": [95, 96, 99],
+}
 
-# --- Widgets de sélection ---
-st.subheader("Paramètres")
+# -------------------------
+# Widgets
+# -------------------------
+st.subheader("Choix de l'événement")
 
-col1, col2 = st.columns([1, 2])
+event_label = st.selectbox(
+    "Événement météo",
+    list(WW_EVENTS.keys())
+)
 
-with col1:
-    ww_values = sorted(df["ww"].unique().tolist())
-    ww_choice = st.selectbox("Code ww à suivre", ww_values, index=0)
+codes_ww = WW_EVENTS[event_label]
 
-with col2:
-    # Petit texte d’aide (tu peux enrichir ce dictionnaire si tu veux)
-    ww_labels = {
-        0: "Temps clair",
-        5: "Brume",
-        10: "Brouillard",
-        95: "Orage",
-        96: "Orage + grêle",
-    }
-    st.info(f"Code sélectionné : **{ww_choice}**" + (f" — {ww_labels[ww_choice]}" if ww_choice in ww_labels else ""))
+tmp = df[df["ww"].isin(codes_ww)].copy()
+tmp["validity_time"] = tmp["validity_time"].dt.tz_convert("Europe/Paris")
+tmp["day"] = tmp["validity_time"].dt.floor("D")
+tmp["year"] = tmp["day"].dt.year
 
-# --- Calcul : occurrences par année ---
-data = df[df["ww"] == ww_choice].copy()
-data["year"] = data["validity_time"].dt.year
+counts = (
+    tmp.drop_duplicates(["day"])
+       .groupby("year")
+       .size()
+       .sort_index()
+)
 
-counts = data.groupby("year").size().sort_index()  # nb d'observations par année
+# -------------------------
+# Résultats
+# -------------------------
+st.subheader("Occurrences par année")
 
-st.subheader("Résultats")
+fig, ax = plt.subplots(figsize=(4, 2), dpi=120)
 
-c1, c2 = st.columns([1, 1])
-with c1:
-    st.metric("Nombre total d'observations", int(counts.sum()) if not counts.empty else 0)
-with c2:
-    st.metric("Nombre d'années concernées", int(counts.shape[0]))
-
-# --- Graphique matplotlib : histogramme (barres) ---
-fig, ax = plt.subplots()
 if counts.empty:
-    ax.text(0.5, 0.5, "Aucune donnée pour ce code ww", ha="center", va="center")
+    ax.text(0.5, 0.5, "Aucune donnée pour cet événement",
+            ha="center", va="center")
     ax.set_axis_off()
 else:
-    ax.bar(counts.index.astype(str), counts.values)
-    ax.set_title(f"Nombre d'observations par année (ww = {ww_choice})")
-    ax.set_xlabel("Année")
-    ax.set_ylabel("Nombre d'observations")
-    ax.tick_params(axis="x", rotation=45)
+
+    years = counts.index.to_list()
+
+    ax.bar(years, counts.values)
+
+    ax.set_title(f"{event_label} – jours par année", fontsize=10)
+    ax.set_xlabel("Année", fontsize=9)
+    ax.set_ylabel("Nombre de jours", fontsize=9)
+
+    # 👉 afficher TOUTES les années
+    ax.set_xticks(years)
+    ax.set_xticklabels(years, rotation=45, fontsize=7)
+
+    ax.tick_params(axis="y", labelsize=8)
+
+    fig.tight_layout()
 
 st.pyplot(fig)
 
-# --- Option : tableau sous le graphique ---
-with st.expander("Afficher le tableau des comptages"):
-    st.dataframe(counts.rename("count").to_frame(), use_container_width=True)
+with st.expander("Afficher le tableau des valeurs"):
+    st.dataframe(counts.rename("nombre").to_frame(),
+                 use_container_width=True)
+
+
+
+
