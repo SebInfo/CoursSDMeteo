@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("Tableau de bord météo")
 
-st.subheader("Contexte")
+st.subheader("Contexte !")
 st.write(
     "Cette application permet de visualiser des données météo issues de l’Open Data. "
     "Elle a été développée avec Streamlit dans un objectif de prototypage rapide."
