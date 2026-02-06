@@ -35,6 +35,11 @@ if afficher_graphique:
         (df["temperature"] >= temperature_min)
     ]
 
+    # --- CAS DATAFRAME VIDE ---
+    if df_filtre.empty:
+        st.warning("Aucune donnée ne correspond aux critères sélectionnés.")
+        st.stop()  # arrête proprement l'exécution Streamlit
+
     st.markdown("### Résultats")
 
     # Affichage des données filtrées
