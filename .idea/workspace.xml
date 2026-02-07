@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5863ce2e-f9b0-4b4c-a1ab-84308c1153d7" name="Changes" comment="Ajout des deux exemples">
+    <list default="true" id="5863ce2e-f9b0-4b4c-a1ab-84308c1153d7" name="Changes" comment="Ajout du premier exemple en Flask">
+      <change afterPath="$PROJECT_DIR$/exemple2Flask.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exemple2Streamlit.py" beforeDir="false" afterPath="$PROJECT_DIR$/exemple2Streamlit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +240,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770370088291</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Ajout des deux exemples">
+      <option name="closed" value="true" />
+      <created>1770386032908</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1770386032908</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Ajout du premier exemple en Flask">
+      <option name="closed" value="true" />
+      <created>1770455845149</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1770455845149</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -250,6 +266,7 @@
     <MESSAGE value="Modification de test3Streamlit.py" />
     <MESSAGE value="exemple4 avec widgets" />
     <MESSAGE value="Ajout des deux exemples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des deux exemples" />
+    <MESSAGE value="Ajout du premier exemple en Flask" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout du premier exemple en Flask" />
   </component>
 </project>
