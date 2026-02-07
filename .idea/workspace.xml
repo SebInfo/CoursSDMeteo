@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5863ce2e-f9b0-4b4c-a1ab-84308c1153d7" name="Changes" comment="Ajout du premier exemple en Flask">
-      <change afterPath="$PROJECT_DIR$/exemple2Flask.py" afterDir="false" />
+    <list default="true" id="5863ce2e-f9b0-4b4c-a1ab-84308c1153d7" name="Changes" comment="Ajout de l'exemple 2 sur les paramètres">
+      <change afterPath="$PROJECT_DIR$/exemple3Flask.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -256,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770455845149</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Ajout de l'exemple 2 sur les paramètres">
+      <option name="closed" value="true" />
+      <created>1770456679796</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1770456679796</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,6 +275,7 @@
     <MESSAGE value="exemple4 avec widgets" />
     <MESSAGE value="Ajout des deux exemples" />
     <MESSAGE value="Ajout du premier exemple en Flask" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout du premier exemple en Flask" />
+    <MESSAGE value="Ajout de l'exemple 2 sur les paramètres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de l'exemple 2 sur les paramètres" />
   </component>
 </project>
