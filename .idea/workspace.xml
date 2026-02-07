@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5863ce2e-f9b0-4b4c-a1ab-84308c1153d7" name="Changes" comment="Ajout de l'exemple 2 sur les paramètres">
-      <change afterPath="$PROJECT_DIR$/exemple3Flask.py" afterDir="false" />
+    <list default="true" id="5863ce2e-f9b0-4b4c-a1ab-84308c1153d7" name="Changes" comment="Ajout de l'exemple 3 sur les paramètres GET">
+      <change afterPath="$PROJECT_DIR$/exemple4Flask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testFormulaireFlask.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -46,23 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.carteFolium.executor&quot;: &quot;Run&quot;,
-    &quot;Python.extractionVille.executor&quot;: &quot;Run&quot;,
-    &quot;Python.précipitation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.temperatureMontpellier.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testStreamlit.executor&quot;: &quot;Run&quot;,
-    &quot;Python.testexport.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/sebastien/PycharmProjects/SAEMeteo/donnees&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.carteFolium.executor": "Run",
+    "Python.extractionVille.executor": "Run",
+    "Python.précipitation.executor": "Run",
+    "Python.temperatureMontpellier.executor": "Run",
+    "Python.testStreamlit.executor": "Run",
+    "Python.testexport.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/sebastien/PycharmProjects/SAEMeteo/donnees",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/donnees" />
@@ -264,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770456679796</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajout de l'exemple 3 sur les paramètres GET">
+      <option name="closed" value="true" />
+      <created>1770457225474</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1770457225474</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -276,6 +287,7 @@
     <MESSAGE value="Ajout des deux exemples" />
     <MESSAGE value="Ajout du premier exemple en Flask" />
     <MESSAGE value="Ajout de l'exemple 2 sur les paramètres" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de l'exemple 2 sur les paramètres" />
+    <MESSAGE value="Ajout de l'exemple 3 sur les paramètres GET" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de l'exemple 3 sur les paramètres GET" />
   </component>
 </project>

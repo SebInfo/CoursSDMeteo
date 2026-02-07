@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Test POST météo</title>
+</head>
+<body>
+
+<h2>Envoi de données météo</h2>
+
+<form action="http://127.0.0.1:5000/meteo" method="post">
+    <label>
+        Ville :
+        <input type="text" name="ville">
+    </label>
+    <br><br>
+
+    <label>
+        Température :
+        <input type="number" step="0.1" name="temp">
+    </label>
+    <br><br>
+
+    <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>
